@@ -38,9 +38,9 @@ export const Basics = () => {
   const [micOn, setMic] = useState(true);
   const [virtualBg, setVirtualBg] = useState(false);
   const [cameraOn, setCameraOn] = useState(true);
-  const { isLoading: isLoadingMic, localMicrophoneTrack } =
+  const { ready: isLoadingMic, localMicrophoneTrack } =
     useLocalMicrophoneTrack(micOn);
-  const { isLoading: isLoadingCam, localCameraTrack } =
+  const { ready: isLoadingCam, localCameraTrack } =
     useLocalCameraTrack(cameraOn);
   usePublish([localMicrophoneTrack, localCameraTrack]);
 
